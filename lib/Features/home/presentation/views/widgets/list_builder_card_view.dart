@@ -2,12 +2,12 @@ import '../../../../../core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class ListBuilderCardView extends StatelessWidget {
-  const ListBuilderCardView({super.key});
-
+  const ListBuilderCardView({super.key, this.height});
+  final double? height;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * .34,
+      height: height ?? MediaQuery.of(context).size.height * .34,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,

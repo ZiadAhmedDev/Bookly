@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/styles.dart';
 import 'list_builder_card_view.dart';
 import 'best_seller_list_view_Item_builder.dart';
-import 'custom_appBar.dart';
+import 'home_custom_appBar.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -18,7 +18,7 @@ class HomeViewBody extends StatelessWidget {
             children: const [
               Padding(
                 padding: EdgeInsets.all(10.0),
-                child: CustomAppBar(),
+                child: HomeCustomAppBar(),
               ),
               ListBuilderCardView(),
               SizedBox(height: 30),
