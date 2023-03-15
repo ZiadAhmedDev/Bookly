@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/widgets.dart';
+
+import '../../../../../core/widgets/widgets.dart';
 
 class BookDetailsButton extends StatelessWidget {
   const BookDetailsButton({super.key});
