@@ -14,17 +14,14 @@ class BestSellerListViewItemBuilder extends StatelessWidget {
       onTap: () {
         GoRouter.of(context).push(AppRouter.kBookDetails);
       },
-      child: SizedBox(
-        height: 125,
-        child: Row(
-          children: const [
-            BestSellerImageViewBuilder(),
-            SizedBox(
-              width: 20,
-            ),
-            BestSellerTextViewBuilder()
-          ],
-        ),
+      child: Row(
+        children: const [
+          BestSellerImageViewBuilder(),
+          SizedBox(
+            width: 20,
+          ),
+          BestSellerTextViewBuilder()
+        ],
       ),
     );
   }
@@ -39,7 +36,9 @@ class BestSellerListViewBuilder extends StatelessWidget {
       padding: EdgeInsets.zero,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: 5,
-      itemBuilder: (context, index) => const BestSellerListViewItemBuilder(),
+      itemBuilder: (context, index) => SizedBox(
+          height: MediaQuery.of(context).size.height * .2,
+          child: const BestSellerListViewItemBuilder()),
     );
   }
 }
